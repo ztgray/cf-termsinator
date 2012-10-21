@@ -1,0 +1,32 @@
+{
+    "main":"public/js/termsinator.js",
+    "name":"Termsinator",
+    "description": "A CloudFlare application that allows site owners to require acceptance of Terms to enter their site.",
+    "version": "0.0.1",
+    "category": "policy management",
+    "account": {
+        "callback_url": "http://termsinator.herokuapp.com/api",
+        "user_fields": ["email"]
+    },
+    "config":{
+        "details":{
+            "Language": "English",
+            "Price": "Free",
+            "Restrictions": "None",
+        },
+        "assets":{
+            "logos" : {
+                "200px": "./public/img/logo-200.png",
+                "132px": "./public/img/logo-132.png"
+            }
+        },
+        "interface": [
+            {
+                "type": "string",
+                "name": "Terms",
+                "description": "Enter the terms visitors to your site must accept.",
+                "id": "terms"
+            }
+        ]
+    }
+}
