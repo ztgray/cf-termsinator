@@ -9,7 +9,8 @@ var port = process.env.PORT || 3000;
 app.use(express.bodyParser());
 
 app.post('/api/accounts', function(req, res) {
-	console.log(req.body);
+	console.log("ACCOUNTS " + req.body.account_id);
+	console.log("ACCOUNTS " + req.body.email);
 	
 	var result = {
 		account_id: -1,
@@ -21,7 +22,8 @@ app.post('/api/accounts', function(req, res) {
 });
 
 app.post('/api/domains', function(req, res) {
-	console.log(req.body);
+	console.log("DOMAINS " + req.body.account_id);
+	console.log("DOMAINS " + req.body.email);
 
 	var result = {
 		domain_id: -1,
