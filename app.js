@@ -9,26 +9,33 @@ var port = process.env.PORT || 3000;
 app.use(express.bodyParser());
 
 app.post('/api/accounts', function(req, res) {
-	console.log("ACCOUNTS " + req.body.account_id);
-	console.log("ACCOUNTS " + req.body.email);
+	console.log('ACCOUNTS ' + req.body.account_id);
 	
 	var result = {
 		account_id: -1,
 		status: "error"
 	};
+	if (req.body.account_id) {
+		result.account_id = req.body.account_id;
+		result.status = 'approve';
+	}
 	
 	res.type('application/json');
 	res.send(JSON.stringify(result));
 });
 
 app.post('/api/domains', function(req, res) {
-	console.log("DOMAINS " + req.body.account_id);
-	console.log("DOMAINS " + req.body.email);
+	console.log('DOMAINS ' + req.body.domain_id);
 
 	var result = {
 		domain_id: -1,
 		status: "error"
 	};
+
+	if (req.body.domain_id) {
+		result.domain_id = req.body.domain_id;
+		result.status = 'approve';
+	}
 	
 	res.type('application/json');
 	res.send(JSON.stringify(result));	
