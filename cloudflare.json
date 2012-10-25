@@ -32,7 +32,7 @@
                 "name": "Redirect",
                 "description": "Enter the destination url for visitors who reject your terms.",
                 "id": "redirect"
-            },
+            }
         ]
     }
 }
