@@ -41,6 +41,8 @@ app.post('/api/domains', function(req, res) {
 	res.send(JSON.stringify(result));	
 });
 
+app.use('/static', express.static(__dirname + '/static'));
+
 app.listen(port, function() { 
     console.log('Termsinator running on ' + port);
 });

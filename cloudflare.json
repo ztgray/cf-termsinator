@@ -2,7 +2,7 @@
     "main":"public/js/termsinator.js",
     "name":"Termsinator",
     "description": "A CloudFlare application that allows site owners to require acceptance of Terms to enter their site.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "category": "policy management",
     "account": {
         "callback_url": "http://termsinator.herokuapp.com/api",
@@ -26,7 +26,13 @@
                 "name": "Terms",
                 "description": "Enter the terms visitors to your site must accept.",
                 "id": "terms"
-            }
+            },
+            {
+                "type": "string",
+                "name": "Redirect",
+                "description": "Enter the destination url for visitors who reject your terms.",
+                "id": "redirect"
+            },
         ]
     }
 }
